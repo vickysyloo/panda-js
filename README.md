@@ -147,6 +147,22 @@ for (var i = 0; i < 10; i++) {
 
 \* you may notice that these functions are vanilla JavaScript and do not come from jQuery
 
+<!-- Solution -->
+
+$(listItem).appendTo('.bio-info');
+<!-- Adds "Page last updated on" column -->
+
+var secondListItem = document.createElement('li');
+var secondSpan = document.createElement('span');
+var updatedOn = document.createTextNode(document.lastModified);
+<!-- Setting up second list element to add to ul -->
+
+secondSpan.appendChild(updatedOn);
+secondListItem.appendChild(secondSpan);
+$(secondListItem).appendTo('.bio-info');
+<!-- Added to bio-info ul -->
+
+
 
 ##Stretch Exercise:
 Sometimes you'll run into situations where you have to get by without jQuery.  Try to find vanilla JavaScript alternatives to each of your answers that use jQuery functions.
