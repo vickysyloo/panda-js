@@ -64,7 +64,13 @@ $('#name').attr({'placeholder': 'Identify yourself'});
 
 8. Change the value attribute of the name field to "your nemesis".
 
+<!-- Solution -->
+
+$('#name').attr({'value': 'Your Nemesis!'});
+
 9. Change the value attribute of the email field to "koalathebear@gmail.com".
+
+
 
 10. Change the value of the submit button on the contact form to "En garde!".
 
