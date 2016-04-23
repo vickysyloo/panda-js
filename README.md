@@ -90,6 +90,7 @@ $('#submit').prop('disabled', true);
 
 12. We should help Panda protect their privacy by clearing their personal details from the sidebar.  You can use [empty()](https://api.jquery.com/empty/) to do this.
 
+$('.bio-info').empty();
 
 ###Adding Elements to the DOM
 
