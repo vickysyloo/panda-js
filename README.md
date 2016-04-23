@@ -41,11 +41,12 @@ $('#time-travel').parent().remove()
 <!-- Solution -->
 
 $('body').css('background-color', '#90C3D4');
+$('body').css('background-color', 'rgb(144, 195, 212)');
 
 
 5. Change the colour used by the `highlight` class.
 
-
+$('.highlight').css('color', 'blue');
 
 6. Find a way to select the round icons in the sidebar and then change their colour.
 
