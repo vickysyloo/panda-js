@@ -77,6 +77,8 @@ $('#email').attr({'value': 'koalathebear@gmail.com'});
 
 10. Change the value of the submit button on the contact form to "En garde!".
 
+$('#submit').val('En Garde!');
+
   Bonus points: try experimenting with both the attr() function and the val() function to find different ways of doing this.
 
 11. We should stop Koala from sending an email to Panda that they might regret!  Find a way to disable the submit button (hint: familiarize yourself with the [disabled attribute](http://www.w3schools.com/tags/att_input_disabled.asp)).
