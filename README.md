@@ -46,9 +46,15 @@ $('body').css('background-color', 'rgb(144, 195, 212)');
 
 5. Change the colour used by the `highlight` class.
 
+<!-- Solution -->
+
 $('.highlight').css('color', 'blue');
 
 6. Find a way to select the round icons in the sidebar and then change their colour.
+
+<!-- Solution -->
+
+$('.action-icon-bg').css({'background-color': 'grey'});
 
 7. Scroll down to the contact form.  Change the placeholder attribute of the name field to "identify yourself".
 
