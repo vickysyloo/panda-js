@@ -83,6 +83,11 @@ $('#submit').val('En Garde!');
 
 11. We should stop Koala from sending an email to Panda that they might regret!  Find a way to disable the submit button (hint: familiarize yourself with the [disabled attribute](http://www.w3schools.com/tags/att_input_disabled.asp)).
 
+<!-- Solution -->
+
+$('#submit').prop('disabled', true);
+
+
 12. We should help Panda protect their privacy by clearing their personal details from the sidebar.  You can use [empty()](https://api.jquery.com/empty/) to do this.
 
 
