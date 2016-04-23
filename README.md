@@ -22,6 +22,10 @@ You should be comfortable selecting elements by tag name (eg. 'h1'), class name 
 
   PROTIP: use the inspector to learn the dimensions of the current profile image and use a placeholder image service such as [Place Kitten](https://placekitten.com/) to get an image of the same size.
 
+<!-- Answer -->
+
+$('.profile-image').attr("src", "https://placekitten.com/400/400");
+
 2. Select the heading that says "Panda the Bear" and change it to your own name. (hint: use [text()](http://api.jquery.com/text/))
 
 3. Panda the Bear is lying about their skills!  Take the "time travel" skill off the page to satisfy your personal sense of justice.  Use your googling and docs-skimming skillz to find a jQuery function that will allow you to remove elements from the DOM.  (hint: there are multiple ways of doing this, but the [parent()](http://api.jquery.com/parent/) function might be useful when it comes to selecting the right element)
@@ -67,7 +71,7 @@ You should be comfortable selecting elements by tag name (eg. 'h1'), class name 
 
    Now we need a new `<span>` tag to go inside the `<li>` we just made.  This span will eventually go in the left column below 'Phone'.
 
-  `var leftSpan = document.createElement('span');` 
+  `var leftSpan = document.createElement('span');`
 
   Next we need to make a "text node" in order to put text inside our new span.  A text node is a chunk of plain text that lives inside some HTML tag in the DOM.
 
