@@ -177,7 +177,9 @@ listItem.appendChild(secondSpan);
 $(listItem).appendTo('.bio-info');
 <!-- Added to bio-info ul -->
 
-
+$('.bio-info-item:nth-Child(4) span').first().addClass('bio-info-title');
+$('.bio-info-item span').last().addClass('bio-info-value bio-info-updated-on');
+<!-- Adding classes for consistency -->
 
 ##Stretch Exercise:
 Sometimes you'll run into situations where you have to get by without jQuery.  Try to find vanilla JavaScript alternatives to each of your answers that use jQuery functions.
