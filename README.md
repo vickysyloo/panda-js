@@ -149,17 +149,27 @@ for (var i = 0; i < 10; i++) {
 
 <!-- Solution -->
 
+var listItem = document.createElement('li');
+var leftSpan = document.createElement('span');
+var lastUpdated = document.createTextNode('Page last updated on');
+leftSpan.appendChild(lastUpdated);
+listItem.appendChild(leftSpan);
+$(listItem).appendTo('.bio-info');
+<!-- Setup for list item and first span -->
+
 $(listItem).appendTo('.bio-info');
 <!-- Adds "Page last updated on" column -->
 
-var secondListItem = document.createElement('li');
+$(listItem).appendTo('.bio-info');
+<!-- Adds class name to new list item -->
+
 var secondSpan = document.createElement('span');
 var updatedOn = document.createTextNode(document.lastModified);
 <!-- Setting up second list element to add to ul -->
 
 secondSpan.appendChild(updatedOn);
-secondListItem.appendChild(secondSpan);
-$(secondListItem).appendTo('.bio-info');
+listItem.appendChild(secondSpan);
+$(listItem).appendTo('.bio-info');
 <!-- Added to bio-info ul -->
 
 
