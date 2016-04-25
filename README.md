@@ -26,15 +26,21 @@ You should be comfortable selecting elements by tag name (eg. 'h1'), class name 
 
 $('.profile-image').attr('src', 'https://placekitten.com/400/400');
 
+document.getElementsByClassName('profile-image')[0].src = "https://placekitten.com/400/400"
+
 2. Select the heading that says "Panda the Bear" and change it to your own name. (hint: use [text()](http://api.jquery.com/text/))
 
 $('h1.highlight').text('Vicky');
+
+document.getElementsByTagName('h1')[0].innerHTML = "Vicky";
 
 3. Panda the Bear is lying about their skills!  Take the "time travel" skill off the page to satisfy your personal sense of justice.  Use your googling and docs-skimming skillz to find a jQuery function that will allow you to remove elements from the DOM.  (hint: there are multiple ways of doing this, but the [parent()](http://api.jquery.com/parent/) function might be useful when it comes to selecting the right element)
 
 <!-- Solution -->
 
 $('#time-travel').parent().remove()
+
+document.getElementById('time-travel').parentElement.remove();
 
 4. Change the colour of the body. (hint: use [css()](http://api.jquery.com/css/))
 
@@ -43,6 +49,8 @@ $('#time-travel').parent().remove()
 $('body').css('background-color', '#90C3D4');
 $('body').css('background-color', 'rgb(144, 195, 212)');
 
+document.body.style.backgroundColor = '#90C3D4';
+
 
 5. Change the colour used by the `highlight` class.
 
@@ -50,11 +58,23 @@ $('body').css('background-color', 'rgb(144, 195, 212)');
 
 $('.highlight').css('color', 'blue');
 
+var x = document.getElementsByClassName("highlight");
+
+for (var i = 0; i < x.length; i++) {
+    x[i].style.color = 'blue';
+};
+
 6. Find a way to select the round icons in the sidebar and then change their colour.
 
 <!-- Solution -->
 
 $('.action-icon-bg').css({'background-color': 'grey'});
+
+var x = document.getElementsByClassName('action-icon-bg');
+
+for (var i = 0; i < x.length; i++) {
+    x[i].style.backgroundColor = "grey";
+};
 
 7. Scroll down to the contact form.  Change the placeholder attribute of the name field to "identify yourself".
 
@@ -62,22 +82,29 @@ $('.action-icon-bg').css({'background-color': 'grey'});
 
 $('#name').attr({'placeholder': 'Identify yourself'});
 
+document.getElementById('name').attributes[4].value = 'Identify Yourself;
+
 8. Change the value attribute of the name field to "your nemesis".
 
 <!-- Solution -->
 
 $('#name').attr({'value': 'Your Nemesis!'});
 
+document.getElementById('name').value = 'Your Nemesis';
+
 9. Change the value attribute of the email field to "koalathebear@gmail.com".
 
 <!-- Solution -->
 
-
 $('#email').attr({'value': 'koalathebear@gmail.com'});
+
+document.getElementById('email').value = "koalathebear@gmail.com";
 
 10. Change the value of the submit button on the contact form to "En garde!".
 
 $('#submit').val('En Garde!');
+
+document.getElementById('submit').value = 'En Garde!';
 
   Bonus points: try experimenting with both the attr() function and the val() function to find different ways of doing this.
 
@@ -87,10 +114,13 @@ $('#submit').val('En Garde!');
 
 $('#submit').prop('disabled', true);
 
+document.getElementById('submit').disabled = 'true';
 
 12. We should help Panda protect their privacy by clearing their personal details from the sidebar.  You can use [empty()](https://api.jquery.com/empty/) to do this.
 
 $('.bio-info').empty();
+
+document.getElementsByClassName('bio-info')[0].remove();
 
 ###Adding Elements to the DOM
 
